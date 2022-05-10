@@ -1,0 +1,14 @@
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\bin\Debug\ProjectBD.exe.config
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\bin\Debug\ProjectBD.exe
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\bin\Debug\ProjectBD.pdb
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.csprojAssemblyReference.cache
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.FormEmployeeTable.resources
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.FormEmployeeLogTime.resources
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.FormLogIn.resources
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.Properties.Resources.resources
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.csproj.GenerateResource.cache
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.csproj.CoreCompileInputs.cache
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.exe
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.pdb
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.FormCreateAcc.resources
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.FormDescription.resources
