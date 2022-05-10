@@ -10,5 +10,5 @@ C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\Proje
 C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.exe
 C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.pdb
-C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.FormCreateAcc.resources
 C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.FormDescription.resources
+C:\Users\Stefan\Desktop\Facultate\BD\Proiect\ProjectBD\ProjectBD\obj\Debug\ProjectBD.FormAddEmployee.resources

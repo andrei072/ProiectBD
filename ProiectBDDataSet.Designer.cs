@@ -295,6 +295,10 @@ namespace ProjectBD {
             
             private global::System.Data.DataColumn columnLogText;
             
+            private global::System.Data.DataColumn columnPhone;
+            
+            private global::System.Data.DataColumn columnAddress;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public TableEmployeeDataTable() {
@@ -394,6 +398,22 @@ namespace ProjectBD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PhoneColumn {
+                get {
+                    return this.columnPhone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AddressColumn {
+                get {
+                    return this.columnAddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +449,7 @@ namespace ProjectBD {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableEmployeeRow AddTableEmployeeRow(string Surname, string Last_Name, string username, string password, decimal LogTime, string Project, string LogText) {
+            public TableEmployeeRow AddTableEmployeeRow(string Surname, string Last_Name, string username, string password, decimal LogTime, string Project, string LogText, string Phone, string Address) {
                 TableEmployeeRow rowTableEmployeeRow = ((TableEmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -439,7 +459,9 @@ namespace ProjectBD {
                         password,
                         LogTime,
                         Project,
-                        LogText};
+                        LogText,
+                        Phone,
+                        Address};
                 rowTableEmployeeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTableEmployeeRow);
                 return rowTableEmployeeRow;
@@ -470,6 +492,8 @@ namespace ProjectBD {
                 this.columnLogTime = base.Columns["LogTime"];
                 this.columnProject = base.Columns["Project"];
                 this.columnLogText = base.Columns["LogText"];
+                this.columnPhone = base.Columns["Phone"];
+                this.columnAddress = base.Columns["Address"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,6 +515,10 @@ namespace ProjectBD {
                 base.Columns.Add(this.columnProject);
                 this.columnLogText = new global::System.Data.DataColumn("LogText", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLogText);
+                this.columnPhone = new global::System.Data.DataColumn("Phone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhone);
+                this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddress);
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
@@ -504,11 +532,10 @@ namespace ProjectBD {
                 this.columnusername.MaxLength = 15;
                 this.columnpassword.AllowDBNull = false;
                 this.columnpassword.MaxLength = 15;
-                this.columnLogTime.AllowDBNull = false;
-                this.columnProject.AllowDBNull = false;
                 this.columnProject.MaxLength = 50;
-                this.columnLogText.AllowDBNull = false;
                 this.columnLogText.MaxLength = 2147483647;
+                this.columnPhone.MaxLength = 15;
+                this.columnAddress.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -708,7 +735,12 @@ namespace ProjectBD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal LogTime {
                 get {
-                    return ((decimal)(this[this.tableTableEmployee.LogTimeColumn]));
+                    try {
+                        return ((decimal)(this[this.tableTableEmployee.LogTimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LogTime\' in table \'TableEmployee\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableTableEmployee.LogTimeColumn] = value;
@@ -719,7 +751,12 @@ namespace ProjectBD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Project {
                 get {
-                    return ((string)(this[this.tableTableEmployee.ProjectColumn]));
+                    try {
+                        return ((string)(this[this.tableTableEmployee.ProjectColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Project\' in table \'TableEmployee\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableTableEmployee.ProjectColumn] = value;
@@ -730,11 +767,108 @@ namespace ProjectBD {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string LogText {
                 get {
-                    return ((string)(this[this.tableTableEmployee.LogTextColumn]));
+                    try {
+                        return ((string)(this[this.tableTableEmployee.LogTextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LogText\' in table \'TableEmployee\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableTableEmployee.LogTextColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Phone {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmployee.PhoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Phone\' in table \'TableEmployee\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmployee.PhoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Address {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmployee.AddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address\' in table \'TableEmployee\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmployee.AddressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLogTimeNull() {
+                return this.IsNull(this.tableTableEmployee.LogTimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLogTimeNull() {
+                this[this.tableTableEmployee.LogTimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsProjectNull() {
+                return this.IsNull(this.tableTableEmployee.ProjectColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetProjectNull() {
+                this[this.tableTableEmployee.ProjectColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLogTextNull() {
+                return this.IsNull(this.tableTableEmployee.LogTextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLogTextNull() {
+                this[this.tableTableEmployee.LogTextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPhoneNull() {
+                return this.IsNull(this.tableTableEmployee.PhoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPhoneNull() {
+                this[this.tableTableEmployee.PhoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAddressNull() {
+                return this.IsNull(this.tableTableEmployee.AddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAddressNull() {
+                this[this.tableTableEmployee.AddressColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -905,12 +1039,14 @@ namespace ProjectBD.ProiectBDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("LogTime", "LogTime");
             tableMapping.ColumnMappings.Add("Project", "Project");
             tableMapping.ColumnMappings.Add("LogText", "LogText");
+            tableMapping.ColumnMappings.Add("Phone", "Phone");
+            tableMapping.ColumnMappings.Add("Address", "Address");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TableEmployee] ([Surname], [Last Name], [username], [password]" +
-                ", [LogTime], [Project], [LogText]) VALUES (@Surname, @Last_Name, @username, @pas" +
-                "sword, @LogTime, @Project, @LogText)";
+                ", [LogTime], [Project], [LogText], [Phone], [Address]) VALUES (@Surname, @Last_N" +
+                "ame, @username, @password, @LogTime, @Project, @LogText, @Phone, @Address)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Last_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Last Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -919,6 +1055,8 @@ namespace ProjectBD.ProiectBDDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LogTime", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 5, 0, "LogTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Project", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Project", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LogText", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LogText", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -934,8 +1072,8 @@ namespace ProjectBD.ProiectBDDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, Surname, [Last Name], username, password, LogTime, Project, LogText FR" +
-                "OM dbo.TableEmployee";
+            this._commandCollection[0].CommandText = "SELECT ID, Surname, [Last Name], username, password, LogTime, Project, LogText, P" +
+                "hone, Address FROM dbo.TableEmployee";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -996,7 +1134,7 @@ namespace ProjectBD.ProiectBDDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Surname, string Last_Name, string username, string password, decimal LogTime, string Project, string LogText) {
+        public virtual int Insert(string Surname, string Last_Name, string username, string password, global::System.Nullable<decimal> LogTime, string Project, string LogText, string Phone, string Address) {
             if ((Surname == null)) {
                 throw new global::System.ArgumentNullException("Surname");
             }
@@ -1021,18 +1159,35 @@ namespace ProjectBD.ProiectBDDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(password));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(LogTime));
+            if ((LogTime.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(LogTime.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             if ((Project == null)) {
-                throw new global::System.ArgumentNullException("Project");
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Project));
             }
             if ((LogText == null)) {
-                throw new global::System.ArgumentNullException("LogText");
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(LogText));
+            }
+            if ((Phone == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Phone));
+            }
+            if ((Address == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Address));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

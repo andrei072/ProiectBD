@@ -94,6 +94,16 @@ namespace ProjectBD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _21_212191_reload_blue_icon_png_image_free_download_searchpng {
+            get {
+                object obj = ResourceManager.GetObject("21-212191_reload-blue-icon-png-image-free-download-searchpng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap account {
             get {
                 object obj = ResourceManager.GetObject("account", resourceCulture);
@@ -179,6 +189,16 @@ namespace ProjectBD.Properties {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-password-manager-password-safe-android-blue-electric-blue-advance" +
                         "d-encryption-standard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_icon_0 {
+            get {
+                object obj = ResourceManager.GetObject("refresh-icon-0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
